@@ -1,0 +1,97 @@
+body{
+  font-size: 14px;
+  font-family: 'Comfortaa', cursive;
+  background-color: #efefef;
+  .container{
+    max-width: 640px;
+    text-align: center;
+    margin: 100px auto;
+    background-color: #fff;
+    position: relative;
+    box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.17);
+    &.koala{
+      &:before{
+        content: '';
+        display: block;
+        position: absolute;
+        width: 300px;
+        height: 414px;
+        background: url(/assets/img/koala.png) no-repeat;
+        right: -300px;
+        bottom: 0;
+      }
+    }
+    .col-md-12{
+      padding: 50px 30px;
+      border-top: 3px solid #799999;
+      .koala-food{
+        h1{
+          font-size: 48px;
+          text-transform: uppercase;
+          font-weight: 600;
+          margin: 0;
+          padding-bottom: 20px;
+          border-bottom: 1px solid #b4d2d5;
+        }
+        .random{
+          margin-top: 40px;
+          h2{
+            margin-bottom: 20px;
+            padding: 10px 0;
+            font-size: 28px;
+            line-height: 28px;
+            color: #424242;
+            &.winner{
+              background: #9cd185;
+            }
+            span{
+              font-weight: 600;
+              color: #000;
+            }
+          }
+          .gamebody{
+            padding: 20px 0;
+            background: #f9f9f9;
+            .participants{
+              margin-bottom: 20px;
+              h3{
+                margin-bottom: 10px;
+                font-size: 24px;
+                line-height: 24px;
+              }
+              .container{
+                margin: 0 auto;
+                padding: 10px 0;
+                background-color: transparent;
+                box-shadow: none;
+              }
+            }
+            .last-winner{
+              margin-bottom: 20px;
+              h3{
+                margin-bottom: 10px;
+                font-size: 24px;
+                line-height: 24px;
+              }
+              select{
+                padding: 5px 10px;
+                outline: none;
+              }
+            }
+            input[type="submit"]{
+              padding: 10px 30px;
+              background: #eb6a41;
+              border: none;
+              border-radius: 5px;
+              color: #fff;
+              outline: none;
+              &:hover{
+                background: #da582f;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

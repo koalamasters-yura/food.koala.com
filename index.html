@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ua">
+<head>
+    <meta charset="UTF-8">
+    <title>Hungry Koala</title>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="robots" content="index, follow">
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa:400,600&display=swap&subset=latin-ext" rel="stylesheet">
+
+    <link href="/vendor/public/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/vendor/public/bootstrap/dist/css/bootstrap-grid.min.css" rel="stylesheet">
+    <link href="/vendor/public/bootstrap/dist/css/bootstrap-reboot.min.css" rel="stylesheet">
+
+    <link href="/assets/style/style.css" rel="stylesheet">
+
+    <script src="/vendor/public/jquery/dist/jquery.min.js"></script>
+    <script src="/vendor/public/bootstrap/dist/js/bootstrap.min.js"></script>
+
+    <script src="/assets/js/script.js"></script>
+</head>
+<body>
+
+<div class="container <?php echo (isset($happyWinner) ? 'koala' : '');?>">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="koala-food">
+                <h1>Hungry Koala</h1>
+                <div class="random">
+                    <h2 class="<?php echo (isset($happyWinner) ? 'winner' : '');?>"><?php echo (isset($happyWinner) ? 'Щасливий переможець: <span>'.$happyWinner.'</span>' : 'Рандом'); ?></h2>
+                    <div class="gamebody">
+                        <form action="" method="post">
+                            <div class="participants">
+                                <h3>Вибери учасників:</h3>
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <label>
+                                                <input type="checkbox" name="participants[]" value="ML">
+                                                <span>Коля</span>
+                                            </label>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <label>
+                                                <input type="checkbox" name="participants[]" value="OK">
+                                                <span>Саша</span>
+                                            </label>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <label>
+                                                <input type="checkbox" name="participants[]" value="OL">
+                                                <span>Олег</span>
+                                            </label>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <label>
+                                                <input type="checkbox" name="participants[]" value="MP">
+                                                <span>Міша</span>
+                                            </label>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <label>
+                                                <input type="checkbox" name="participants[]" value="YL">
+                                                <span>Юра</span>
+                                            </label>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <label>
+                                                <input type="checkbox" name="participants[]" value="IL">
+                                                <span>Ігор</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="last-winner">
+                                <h3>Минулий переможець</h3>
+                                <select size="1" name="winner">
+                                    <option selected value="none">невідомий</option>
+                                    <option value="ML">Коля</option>
+                                    <option value="OK">Саша</option>
+                                    <option value="OL">Олег</option>
+                                    <option value="MP">Міша</option>
+                                    <option value="YL">Юра</option>
+                                    <option value="IL">Ігор</option>
+                                </select>
+                            </div>
+                            <input type="submit" name="game_submit" value="Знайти жертву">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
